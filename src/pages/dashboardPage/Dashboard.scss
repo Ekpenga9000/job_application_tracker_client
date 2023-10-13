@@ -1,0 +1,44 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.dashboard{
+    padding:1rem;
+    height: 100vh;
+    width: 100vw;
+    background-color: $bg-color-1;
+    color: #fff;
+    &__top{
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+.card{
+    background-color: $bg-color-2;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: scroll;
+    margin-block: 0.5rem;
+}
+
+.table{
+    width: 100%;
+    &__row{
+        display:flex;
+        &--border{
+            @extend .table__row;
+            border-top:0.03rem	solid #d6d3d3;
+        }
+    }
+    &__cell{
+        width: 10rem;
+    }
+    &__header{
+        font-weight: 600;
+    }
+    &__text{
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+}
+
